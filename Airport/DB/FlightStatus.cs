@@ -14,7 +14,16 @@ namespace Airport.DB
     
     public partial class FlightStatus
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public FlightStatus()
+        {
+            this.Flight = new HashSet<Flight>();
+        }
+    
         public int IDFlightStatus { get; set; }
         public string NameStatus { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Flight> Flight { get; set; }
     }
 }

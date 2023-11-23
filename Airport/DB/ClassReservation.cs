@@ -12,23 +12,18 @@ namespace Airport.DB
     using System;
     using System.Collections.Generic;
     
-    public partial class AirplaneModel
+    public partial class ClassReservation
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public AirplaneModel()
+        public ClassReservation()
         {
-            this.Airplane = new HashSet<Airplane>();
+            this.Ticket = new HashSet<Ticket>();
         }
     
-        public int NumberModel { get; set; }
-        public string Decoding { get; set; }
-        public Nullable<int> CountSeats { get; set; }
-        public Nullable<int> Speed { get; set; }
-        public Nullable<int> LenghtFly { get; set; }
-        public Nullable<int> MaxWeight { get; set; }
-        public string MaxHeight { get; set; }
+        public int IDClassReservation { get; set; }
+        public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Airplane> Airplane { get; set; }
+        public virtual ICollection<Ticket> Ticket { get; set; }
     }
 }

@@ -14,6 +14,13 @@ namespace Airport.DB
     
     public partial class Aircompany
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Aircompany()
+        {
+            this.Airplane = new HashSet<Airplane>();
+            this.Worker = new HashSet<Worker>();
+        }
+    
         public int IDAircompany { get; set; }
         public string Nazvanie { get; set; }
         public Nullable<int> Rating { get; set; }
@@ -21,5 +28,10 @@ namespace Airport.DB
         public string ContactPhone { get; set; }
         public string ContactEmail { get; set; }
         public Nullable<int> YearOfCreate { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Airplane> Airplane { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Worker> Worker { get; set; }
     }
 }

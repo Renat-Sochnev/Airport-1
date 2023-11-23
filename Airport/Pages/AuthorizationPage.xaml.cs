@@ -35,26 +35,19 @@ namespace Airport.Pages
             workers = new List<Worker>(DBConnection.airportEntities.Worker.ToList());
             var currentWorker = workers.FirstOrDefault(i => i.Login == login && i.Password == password);
             DBConnection.loginedWorker = currentWorker;
-            if (currentWorker != null)
-            {
-                //if (currentWorker.Position.Nazvanie == "преподаватель")
-                //    NavigationService.Navigate(new ExamPage());
-                //else if (currentWorker.Position.Nazvanie == "зав. кафедрой")
-                //    NavigationService.Navigate(new ChairPage());
-                //else if (currentWorker.Position.Nazvanie == "инженер")
-                //    NavigationService.Navigate(new WorkerPage());
-            }
-            else
-            {
-                MessageBox.Show("Неверный логин или пароль. Попробуйте снова.");
-            }
+
 
             clients = new List<Client>(DBConnection.airportEntities.Client.ToList());
             var currentClient = clients.FirstOrDefault(i => i.Email == login && i.Password == password);
             DBConnection.loginedClient = currentClient;
-            if (currentClient != null)
+
+            if (currentWorker != null)
             {
-                NavigationService.Navigate(new ClientPage());
+                NavigationService.Navigate(new MainMenuWorkerPage());
+            }
+            else if (currentClient != null)
+            {
+                NavigationService.Navigate(new MainMenuClientrPage());
             }
             else
             {

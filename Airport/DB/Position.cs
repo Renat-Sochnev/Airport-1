@@ -14,7 +14,16 @@ namespace Airport.DB
     
     public partial class Position
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Position()
+        {
+            this.Worker = new HashSet<Worker>();
+        }
+    
         public int IDPosition { get; set; }
         public string Nazvanie { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Worker> Worker { get; set; }
     }
 }

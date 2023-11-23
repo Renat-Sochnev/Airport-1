@@ -12,20 +12,19 @@ namespace Airport.DB
     using System;
     using System.Collections.Generic;
     
-    public partial class City
+    public partial class Ticket
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public City()
-        {
-            this.Flyghtport = new HashSet<Flyghtport>();
-        }
+        public int IDTicket { get; set; }
+        public Nullable<System.DateTime> DateOfBuy { get; set; }
+        public Nullable<int> IDClassReservation { get; set; }
+        public Nullable<int> IDFlight { get; set; }
+        public Nullable<int> Cost { get; set; }
+        public Nullable<int> IDClient { get; set; }
+        public Nullable<int> IDBaggage { get; set; }
     
-        public int IDCity { get; set; }
-        public string Nazvanie { get; set; }
-        public Nullable<int> IDCounrty { get; set; }
-    
-        public virtual Country Country { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Flyghtport> Flyghtport { get; set; }
+        public virtual Baggage Baggage { get; set; }
+        public virtual ClassReservation ClassReservation { get; set; }
+        public virtual Client Client { get; set; }
+        public virtual Flight Flight { get; set; }
     }
 }
