@@ -53,7 +53,7 @@
         <ListView.View>
             <GridView>
                 <GridView.Columns>
-                    <GridViewColumn Header ="ID" Width="90">
+                    <GridViewColumn Header ="ID" Width="80">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding IDWorker}"/>
@@ -81,14 +81,14 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header ="Дата рождения" Width="200">
+                    <GridViewColumn Header ="Дата рождения" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding DateOfBirth}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header ="Паспортные данные" Width="200">
+                    <GridViewColumn Header ="Паспортные данные" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Passport}"/>
@@ -101,14 +101,14 @@
                                 <TextBlock Text="{Binding Phone}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
-                    </GridViewColumn><GridViewColumn Header ="Стаж" Width="200">
+                    </GridViewColumn><GridViewColumn Header ="Стаж" Width="80">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Stach}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header ="Оклад" Width="200">
+                    <GridViewColumn Header ="Оклад" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Salary}"/>
@@ -136,7 +136,6 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                 
                 </GridView.Columns>
             </GridView>
         </ListView.View>
