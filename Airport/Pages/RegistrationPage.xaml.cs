@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Airport.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,19 @@ namespace Airport.Pages
         public RegistrationPage()
         {
             InitializeComponent();
+        }
+
+        private void EnterBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Client client = new Client();
+            //client.Surname = 
+            //client.Name =
+            //client.Patronymic =
+            //client.DateOfBirth =
+            //client.Passport =
+            //client.Phone =
+            //client.Email =
+            //client.Password = 
         }
     }
 }
