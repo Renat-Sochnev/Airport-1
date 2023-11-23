@@ -26,17 +26,56 @@ namespace Airport.Pages
             InitializeComponent();
         }
 
-        private void EnterBTN_Click(object sender, RoutedEventArgs e)
+        private void RegBTN_Click(object sender, RoutedEventArgs e)
         {
-            Client client = new Client();
-            //client.Surname = 
-            //client.Name =
-            //client.Patronymic =
-            //client.DateOfBirth =
-            //client.Passport =
-            //client.Phone =
-            //client.Email =
-            //client.Password = 
+            if (string.IsNullOrWhiteSpace(SurnameTB.Text) || string.IsNullOrWhiteSpace(NameTB.Text) || string.IsNullOrWhiteSpace(PatronymicTB.Text) ||
+                DateOfBirthDP.SelectedDate == null || string.IsNullOrWhiteSpace(PassportTB.Text) || string.IsNullOrWhiteSpace(PhoneTB.Text) || 
+                string.IsNullOrWhiteSpace(EmailTB.Text) || string.IsNullOrWhiteSpace(PasswordTB.Password))
+            {
+                MessageBox.Show("Заполните все поля");
+            }
+            else if ((DateTime.Now - (DateTime)DateOfBirthDP.SelectedDate).TotalDays < 365 * 16)
+            {
+                MessageBox.Show("Для регистрации вам должно быть минимум 16 лет");
+            }
+            else if (SameEmail())
+            {
+                MessageBox.Show("Такая почта уже зарегестрирована");
+            }
+            else
+            {
+                Client client = new Client();
+                client.Surname = SurnameTB.Text.Trim();
+                client.Name = NameTB.Text.Trim();
+                client.Patronymic = PatronymicTB.Text.Trim();
+                client.DateOfBirth = DateOfBirthDP.SelectedDate;
+                client.Passport = PassportTB.Text.Trim();
+                client.Phone = PhoneTB.Text.Trim();
+                client.Email = EmailTB.Text.Trim();
+                client.Password = PasswordTB.Password.Trim();
+                DBConnection.airportEntities.Client.Add(client);
+                DBConnection.airportEntities.SaveChanges();
+            }
+        }
+        private bool SameEmail()
+        {
+            Client client = new List<Client>(DBConnection.airportEntities.Client.ToList()).FirstOrDefault(x => x.Email.Trim() == EmailTB.Text.Trim());
+            if (client != null)
+            {
+                return true;
+            }
+            else
+            {
+                Worker worker = new List<Worker>(DBConnection.airportEntities.Worker.ToList()).FirstOrDefault(x => x.Email.Trim() == EmailTB.Text.Trim());
+                if(worker != null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
     }
 }

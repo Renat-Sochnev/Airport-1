@@ -14,6 +14,17 @@ namespace Airport.DB
     
     public partial class Worker
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Worker()
+        {
+            this.Flight = new HashSet<Flight>();
+            this.Flight1 = new HashSet<Flight>();
+            this.Flight2 = new HashSet<Flight>();
+            this.Team = new HashSet<Team>();
+            this.Team1 = new HashSet<Team>();
+            this.Team2 = new HashSet<Team>();
+        }
+    
         public int IDWorker { get; set; }
         public string Surname { get; set; }
         public string Name { get; set; }
@@ -26,5 +37,21 @@ namespace Airport.DB
         public string Login { get; set; }
         public string Password { get; set; }
         public Nullable<int> IDAircompany { get; set; }
+        public string Email { get; set; }
+    
+        public virtual Aircompany Aircompany { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Flight> Flight { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Flight> Flight1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Flight> Flight2 { get; set; }
+        public virtual Position Position { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Team> Team { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Team> Team1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Team> Team2 { get; set; }
     }
 }

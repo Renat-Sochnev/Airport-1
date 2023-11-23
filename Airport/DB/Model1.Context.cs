@@ -34,5 +34,12 @@ namespace Airport.DB
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Worker> Worker { get; set; }
         public virtual DbSet<Client> Client { get; set; }
+        public virtual DbSet<Airplane> Airplane { get; set; }
+        public virtual DbSet<Baggage> Baggage { get; set; }
+        public virtual DbSet<Flyghtport> Flyghtport { get; set; }
+        public virtual DbSet<Team> Team { get; set; }
+        public virtual DbSet<ClassReservation> ClassReservation { get; set; }
+        public virtual DbSet<Flight> Flight { get; set; }
+        public virtual DbSet<Ticket> Ticket { get; set; }
     }
 }

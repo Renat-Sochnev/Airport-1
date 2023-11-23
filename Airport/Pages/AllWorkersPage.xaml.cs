@@ -20,6 +20,7 @@ namespace Airport.Pages
     /// </summary>
     public partial class AllWorkersPage : Page
     {
+        public static AddWorkerPage 
         public AllWorkersPage()
         {
             InitializeComponent();
@@ -27,12 +28,12 @@ namespace Airport.Pages
 
         private void AddWorkerBTN_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new AddWorkerPage());
         }
 
         private void EditWorkerBTN_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new EditWorkerPage());
         }
 
         private void DeleteWorkerBTN_Click(object sender, RoutedEventArgs e)
@@ -42,7 +43,7 @@ namespace Airport.Pages
 
         private void BackBTN_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new AddWorkerPage());
         }
     }
 }

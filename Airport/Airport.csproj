@@ -75,10 +75,19 @@
     <Compile Include="DB\Aircompany.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\Airplane.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\AirplaneModel.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\Baggage.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\City.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ClassReservation.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Client.cs">
@@ -88,7 +97,13 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\DBConnection.cs" />
+    <Compile Include="DB\Flight.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\FlightStatus.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Flyghtport.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Model1.Context.cs">
@@ -112,6 +127,12 @@
     <Compile Include="DB\sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\Team.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Ticket.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\Worker.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -123,7 +144,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AllAircompaniesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AllAirplanesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AllAirportsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AllCitiesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AllClientPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AllCountriesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AllTeamsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -151,6 +196,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\MainMenuClientrPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MainMenuWorkerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\RegistrationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -160,8 +213,26 @@
     <Compile Include="Pages\AddWorkerPage.xaml.cs">
       <DependentUpon>AddWorkerPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AllAircompaniesPage.xaml.cs">
+      <DependentUpon>AllAircompaniesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AllAirplanesPage.xaml.cs">
+      <DependentUpon>AllAirplanesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AllAirportsPage.xaml.cs">
+      <DependentUpon>AllAirportsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AllCitiesPage.xaml.cs">
+      <DependentUpon>AllCitiesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AllClientPage.xaml.cs">
       <DependentUpon>AllClientPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AllCountriesPage.xaml.cs">
+      <DependentUpon>AllCountriesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AllTeamsPage.xaml.cs">
+      <DependentUpon>AllTeamsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AllWorkersPage.xaml.cs">
       <DependentUpon>AllWorkersPage.xaml</DependentUpon>
@@ -180,6 +251,12 @@
     </Compile>
     <Compile Include="Pages\FlightsPage.xaml.cs">
       <DependentUpon>FlightsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MainMenuClientrPage.xaml.cs">
+      <DependentUpon>MainMenuClientrPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MainMenuWorkerPage.xaml.cs">
+      <DependentUpon>MainMenuWorkerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>

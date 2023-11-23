@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="deafea76136f40ecae5616a4c5aaa746" Name="Diagram1">
+      <Diagram DiagramId="deafea76136f40ecae5616a4c5aaa746" Name="Diagram1" ZoomLevel="83">
         <EntityTypeShape EntityType="AirportModel.Aircompany" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AirportModel.AirplaneModel" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AirportModel.City" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
@@ -14,6 +14,33 @@
         <EntityTypeShape EntityType="AirportModel.sysdiagrams" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AirportModel.Worker" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AirportModel.Client" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="AirportModel.Airplane" Width="1.5" PointX="0.625" PointY="6.5" />
+        <EntityTypeShape EntityType="AirportModel.Baggage" Width="1.5" PointX="2.625" PointY="6.5" />
+        <EntityTypeShape EntityType="AirportModel.Flyghtport" Width="1.5" PointX="4.5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AirportModel.Team" Width="1.5" PointX="6.625" PointY="7.5" />
+        <EntityTypeShape EntityType="AirportModel.ClassReservation" Width="1.5" PointX="11" PointY="1.375" />
+        <EntityTypeShape EntityType="AirportModel.Flight" Width="1.5" PointX="11" PointY="4.25" />
+        <EntityTypeShape EntityType="AirportModel.Ticket" Width="1.5" PointX="13.25" PointY="4.625" />
+        <AssociationConnector Association="AirportModel.FK_Airplane_Aircompany" />
+        <AssociationConnector Association="AirportModel.FK_Worker_Aircompany" />
+        <AssociationConnector Association="AirportModel.FK_Airplane_AirplaneModel" />
+        <AssociationConnector Association="AirportModel.FK_Airplane_Team" />
+        <AssociationConnector Association="AirportModel.FK_Flight_Airplane" />
+        <AssociationConnector Association="AirportModel.FK_Ticket_Baggage" />
+        <AssociationConnector Association="AirportModel.FK_City_Country" />
+        <AssociationConnector Association="AirportModel.FK_Flyghtport_City" />
+        <AssociationConnector Association="AirportModel.FK_Ticket_ClassReservation" />
+        <AssociationConnector Association="AirportModel.FK_Ticket_Client" />
+        <AssociationConnector Association="AirportModel.FK_Flight_FlightStatus" />
+        <AssociationConnector Association="AirportModel.FK_Flight_Flyghtport" />
+        <AssociationConnector Association="AirportModel.FK_Flight_Worker" />
+        <AssociationConnector Association="AirportModel.FK_Flight_Worker1" />
+        <AssociationConnector Association="AirportModel.FK_Flight_Worker2" />
+        <AssociationConnector Association="AirportModel.FK_Ticket_Flight" />
+        <AssociationConnector Association="AirportModel.FK_Worker_Position" />
+        <AssociationConnector Association="AirportModel.FK_Team_Worker" />
+        <AssociationConnector Association="AirportModel.FK_Team_Worker1" />
+        <AssociationConnector Association="AirportModel.FK_Team_Worker2" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
